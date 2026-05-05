@@ -10,3 +10,4 @@ chapters:
   - file: data_understanding
     sections:
       - file: eksplorasi_data
+      - file: missing_values
