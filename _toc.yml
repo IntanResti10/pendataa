@@ -11,3 +11,6 @@ chapters:
     sections:
       - file: eksplorasi_data
       - file: missing_values
+  - file: data_preparation
+    sections:
+      - file: data_campuran
