@@ -15,3 +15,4 @@ chapters:
     sections:
       - file: data_campuran
       - file: data_preparation_knn
+  - file: naive_bayes
