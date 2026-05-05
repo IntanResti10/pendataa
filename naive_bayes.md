@@ -29,7 +29,7 @@ Tujuannya adalah untuk menganalisis faktor-faktor medis yang berkontribusi terha
 berikut adalah sumber datanya: https://www.kaggle.com/datasets/johnsmith88/heart-disease-dataset 
 
 #### Metodologi
-![image](https://hackmd.io/_uploads/SySAqiD0bg.png)
+![Metodologi](images/metodologi.png)
 ###### 1. Input Data
 membaca file melalui Excel Reader
 ###### 2. Pre-processing 
@@ -41,7 +41,7 @@ Membagi data menggunakan Table Partitioner dengan rasio 80% (Data Latih) dan 20%
 Melatih model menggunakan Naive Bayes Learner dan melakukan prediksi dengan Naive Bayes Predictor.
 
 #### Visualisasi Data (Scatter Plot)
-![image](https://hackmd.io/_uploads/BJJ2RowRbe.png)
+![Scatter Plot](images/scatterplot.png)
 - Sumbu X (Horizontal): age (Usia).
 - Sumbu Y (Vertikal): chol (Kolesterol).
 - Titik Merah: Mewakili Target 0 (Pasien Sehat / Tidak ada risiko penyakit jantung). 
@@ -53,7 +53,7 @@ Melatih model menggunakan Naive Bayes Learner dan melakukan prediksi dengan Naiv
 
 #### Hasil 
 ###### Confusion Matrix (Detail Prediksi)
-![image](https://hackmd.io/_uploads/ry2VlhwAZe.png)
+![Confusion](images/confusionmatrix.png)
 - Akurasi (Accuracy): 82,439%. Ini berarti dari 100 pasien, model berhasil menebak dengan benar sekitar 82 orang.  
 - Jumlah Benar (Correct Classified): 169 data.  
 - Jumlah Salah (Wrong Classified): 36 data.  - Tingkat Kesalahan (Error): 17,561%.
