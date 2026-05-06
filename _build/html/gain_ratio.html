@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Implementasi Klasifikasi Play Tennis menggunakan KNIME &#8212; My sample book</title>
+    <title>Gain Ratio &#8212; My sample book</title>
   
   
   
@@ -188,7 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="naive_bayes.html">Naive Bayes</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Implementasi Klasifikasi Play Tennis menggunakan KNIME</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Gain Ratio</a></li>
 </ul>
 
     </div>
@@ -374,7 +374,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Implementasi Klasifikasi Play Tennis menggunakan KNIME</h1>
+    <h1>Gain Ratio</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -384,9 +384,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-knime">Implementasi KNIME</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-dan-visualisasi-decition-tree">Hasil dan Visualisasi Decition Tree</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model-scorer">Evaluasi Model Scorer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-gain-ratio-klasifikasi-play-tennis-menggunakan-knime">Implementasi Gain Ratio Klasifikasi Play Tennis menggunakan KNIME</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-knime">Implementasi KNIME</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-dan-visualisasi-decition-tree">Hasil dan Visualisasi Decition Tree</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model-scorer">Evaluasi Model Scorer</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -398,8 +401,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="implementasi-klasifikasi-play-tennis-menggunakan-knime">
-<h1>Implementasi Klasifikasi Play Tennis menggunakan KNIME<a class="headerlink" href="#implementasi-klasifikasi-play-tennis-menggunakan-knime" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="gain-ratio">
+<h1>Gain Ratio<a class="headerlink" href="#gain-ratio" title="Permalink to this heading">#</a></h1>
+<section id="implementasi-gain-ratio-klasifikasi-play-tennis-menggunakan-knime">
+<h2>Implementasi Gain Ratio Klasifikasi Play Tennis menggunakan KNIME<a class="headerlink" href="#implementasi-gain-ratio-klasifikasi-play-tennis-menggunakan-knime" title="Permalink to this heading">#</a></h2>
 <p>Data yang digunakan adalah data gain ratio.xlsx</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
@@ -530,7 +535,7 @@ document.write(`
 <li><p>Gain Ratio: Hasil bagi antara Information Gain dan Split Info. Atribut dengan Gain Ratio tertinggi akan dipilih sebagai simpul (node) pemisah.</p></li>
 </ol>
 <section id="implementasi-knime">
-<h2>Implementasi KNIME<a class="headerlink" href="#implementasi-knime" title="Permalink to this heading">#</a></h2>
+<h3>Implementasi KNIME<a class="headerlink" href="#implementasi-knime" title="Permalink to this heading">#</a></h3>
 <p><img alt="gain1" src="_images/gain1.png" /></p>
 <ul class="simple">
 <li><p>Excel Reader: Digunakan untuk membaca file dataset. Pastikan baris nama kolom sudah diatur dengan benar agar terbaca sebagai header.</p></li>
@@ -548,7 +553,7 @@ document.write(`
 </ul>
 </section>
 <section id="hasil-dan-visualisasi-decition-tree">
-<h2>Hasil dan Visualisasi Decition Tree<a class="headerlink" href="#hasil-dan-visualisasi-decition-tree" title="Permalink to this heading">#</a></h2>
+<h3>Hasil dan Visualisasi Decition Tree<a class="headerlink" href="#hasil-dan-visualisasi-decition-tree" title="Permalink to this heading">#</a></h3>
 <p><img alt="gain2" src="_images/gain2.png" /></p>
 <ul class="simple">
 <li><p>Akar Utama (Root Node): Atribut Humidity (teridentifikasi sebagai empty_E) terpilih sebagai pemisah utama karena memiliki Gain Ratio tertinggi.</p></li>
@@ -562,7 +567,7 @@ document.write(`
 </ul>
 </section>
 <section id="evaluasi-model-scorer">
-<h2>Evaluasi Model Scorer<a class="headerlink" href="#evaluasi-model-scorer" title="Permalink to this heading">#</a></h2>
+<h3>Evaluasi Model Scorer<a class="headerlink" href="#evaluasi-model-scorer" title="Permalink to this heading">#</a></h3>
 <p><img alt="gain3" src="_images/gain3.png" /></p>
 <ul class="simple">
 <li><p>Correct Classified: 1 (Satu data berhasil ditebak dengan benar)</p></li>
@@ -575,6 +580,7 @@ document.write(`
 <li><p>True Negative: Terdapat 1 data “No” yang diprediksi dengan benar sebagai “No”.</p></li>
 <li><p>False Negative: Terdapat 1 data “Yes” yang salah diprediksi menjadi “No”.</p></li>
 </ul>
+</section>
 </section>
 </section>
 
@@ -633,9 +639,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-knime">Implementasi KNIME</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-dan-visualisasi-decition-tree">Hasil dan Visualisasi Decition Tree</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model-scorer">Evaluasi Model Scorer</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-gain-ratio-klasifikasi-play-tennis-menggunakan-knime">Implementasi Gain Ratio Klasifikasi Play Tennis menggunakan KNIME</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-knime">Implementasi KNIME</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-dan-visualisasi-decition-tree">Hasil dan Visualisasi Decition Tree</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model-scorer">Evaluasi Model Scorer</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
