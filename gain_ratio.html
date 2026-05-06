@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Business Understanding &#8212; My sample book</title>
+    <title>Implementasi Klasifikasi Play Tennis menggunakan KNIME &#8212; My sample book</title>
   
   
   
@@ -62,11 +62,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'business';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'gain_ratio';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Data Understanding" href="data_understanding.html" />
-    <link rel="prev" title="240411100147 Intan Resti Haslindawati" href="intro.html" />
+    <link rel="prev" title="Naive Bayes" href="naive_bayes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -174,7 +173,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Business Understanding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="business.html">Business Understanding</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="data_understanding.html">Data Understanding</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="eksplorasi_data.html">Eksplorasi Data</a></li>
 
@@ -189,6 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="naive_bayes.html">Naive Bayes</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Implementasi Klasifikasi Play Tennis menggunakan KNIME</a></li>
 </ul>
 
     </div>
@@ -260,7 +260,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbusiness.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fgain_ratio.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -290,7 +290,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/business.md" target="_blank"
+      <li><a href="_sources/gain_ratio.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -374,7 +374,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Business Understanding</h1>
+    <h1>Implementasi Klasifikasi Play Tennis menggunakan KNIME</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -384,17 +384,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-business-understanding">Tujuan Business Understanding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tahapan-dalam-business-understanding">Tahapan dalam Business Understanding</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-tujuan-bisnis">1. Menentukan Tujuan Bisnis</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengidentifikasi-permasalahan">2. Mengidentifikasi Permasalahan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-tujuan-data-mining">3. Menentukan Tujuan Data Mining</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-strategi">4. Menentukan Strategi</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-kasus">Contoh Kasus</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-knime">Implementasi KNIME</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-dan-visualisasi-decition-tree">Hasil dan Visualisasi Decition Tree</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model-scorer">Evaluasi Model Scorer</a></li>
 </ul>
             </nav>
         </div>
@@ -406,65 +398,183 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="business-understanding">
-<h1>Business Understanding<a class="headerlink" href="#business-understanding" title="Permalink to this heading">#</a></h1>
-<section id="pengertian">
-<h2>Pengertian<a class="headerlink" href="#pengertian" title="Permalink to this heading">#</a></h2>
-<p>Business Understanding adalah tahap awal dalam proses penambangan data (data mining) yang bertujuan untuk memahami tujuan bisnis, permasalahan yang dihadapi, serta kebutuhan yang ingin dicapai oleh suatu organisasi atau perusahaan.</p>
-<p>Tahap ini sangat penting karena menjadi dasar dalam menentukan arah analisis data yang akan dilakukan.</p>
-</section>
-<hr class="docutils" />
-<section id="tujuan-business-understanding">
-<h2>Tujuan Business Understanding<a class="headerlink" href="#tujuan-business-understanding" title="Permalink to this heading">#</a></h2>
-<p>Adapun tujuan dari tahap ini antara lain:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="implementasi-klasifikasi-play-tennis-menggunakan-knime">
+<h1>Implementasi Klasifikasi Play Tennis menggunakan KNIME<a class="headerlink" href="#implementasi-klasifikasi-play-tennis-menggunakan-knime" title="Permalink to this heading">#</a></h1>
+<p>Data yang digunakan adalah data gain ratio.xlsx</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Day</p></th>
+<th class="head"><p>Outlook</p></th>
+<th class="head"><p>Temp</p></th>
+<th class="head"><p>Humidity</p></th>
+<th class="head"><p>Wind</p></th>
+<th class="head"><p>PlayTennis</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>D1</p></td>
+<td><p>Sunny</p></td>
+<td><p>Hot</p></td>
+<td><p>High</p></td>
+<td><p>False</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-odd"><td><p>D2</p></td>
+<td><p>Sunny</p></td>
+<td><p>Hot</p></td>
+<td><p>High</p></td>
+<td><p>True</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p>D3</p></td>
+<td><p>Overcast</p></td>
+<td><p>Hot</p></td>
+<td><p>High</p></td>
+<td><p>False</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>D4</p></td>
+<td><p>Rain</p></td>
+<td><p>Mild</p></td>
+<td><p>High</p></td>
+<td><p>False</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p>D5</p></td>
+<td><p>Rain</p></td>
+<td><p>Cool</p></td>
+<td><p>Normal</p></td>
+<td><p>False</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>D6</p></td>
+<td><p>Rain</p></td>
+<td><p>Cool</p></td>
+<td><p>Normal</p></td>
+<td><p>True</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p>D7</p></td>
+<td><p>Overcast</p></td>
+<td><p>Cool</p></td>
+<td><p>Normal</p></td>
+<td><p>True</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>D8</p></td>
+<td><p>Sunny</p></td>
+<td><p>Mild</p></td>
+<td><p>High</p></td>
+<td><p>False</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-even"><td><p>D9</p></td>
+<td><p>Sunny</p></td>
+<td><p>Cool</p></td>
+<td><p>Normal</p></td>
+<td><p>False</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>D10</p></td>
+<td><p>Rain</p></td>
+<td><p>Mild</p></td>
+<td><p>Normal</p></td>
+<td><p>False</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p>D11</p></td>
+<td><p>Sunny</p></td>
+<td><p>Mild</p></td>
+<td><p>Normal</p></td>
+<td><p>True</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>D12</p></td>
+<td><p>Overcast</p></td>
+<td><p>Mild</p></td>
+<td><p>High</p></td>
+<td><p>True</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p>D13</p></td>
+<td><p>Overcast</p></td>
+<td><p>Hot</p></td>
+<td><p>Normal</p></td>
+<td><p>False</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>D14</p></td>
+<td><p>Rain</p></td>
+<td><p>Mild</p></td>
+<td><p>High</p></td>
+<td><p>True</p></td>
+<td><p>No</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>ada beberapa atribut:</p>
 <ul class="simple">
-<li><p>Mengidentifikasi permasalahan utama dalam bisnis</p></li>
-<li><p>Menentukan tujuan analisis data</p></li>
-<li><p>Menyesuaikan solusi data dengan kebutuhan bisnis</p></li>
-<li><p>Menghindari kesalahan analisis akibat salah memahami masalah</p></li>
+<li><p>Outlook: Sunny, Overcast, Rain.</p></li>
+<li><p>Temperature: Hot, Mild, Cool.</p></li>
+<li><p>Humidity: High, Normal.</p></li>
+<li><p>Wind: True, False.</p></li>
+</ul>
+<p>target :</p>
+<ul class="simple">
+<li><p>PlayTennis: Yes, No.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Information Gain: Mengukur efektivitas suatu atribut dalam mengklasifikasikan data.</p></li>
+<li><p>Split Info: Nilai yang digunakan untuk menghambat atribut yang memiliki banyak nilai unik agar tidak mendominasi hasil.</p></li>
+<li><p>Gain Ratio: Hasil bagi antara Information Gain dan Split Info. Atribut dengan Gain Ratio tertinggi akan dipilih sebagai simpul (node) pemisah.</p></li>
+</ol>
+<section id="implementasi-knime">
+<h2>Implementasi KNIME<a class="headerlink" href="#implementasi-knime" title="Permalink to this heading">#</a></h2>
+<p><img alt="gain1" src="_images/gain1.png" /></p>
+<ul class="simple">
+<li><p>Excel Reader: Digunakan untuk membaca file dataset. Pastikan baris nama kolom sudah diatur dengan benar agar terbaca sebagai header.</p></li>
+<li><p>Table Partitioner: Membagi data menjadi data latih (training) dan data uji (testing) untuk validasi model.</p></li>
+<li><p>Color Manager: Memberikan label warna pada kolom target PlayTennis. Hal ini memudahkan identifikasi visual pada pohon akar (misal: coklat untuk ‘yes’ dan hijau untuk ‘no’).</p></li>
+<li><p>Decision Tree Learner:</p>
+<ul>
+<li><p>Class Column: PlayTennis.</p></li>
+<li><p>Quality Measure: Wajib pilih Gain Ratio.</p></li>
+<li><p>Pruning: Dimatikan agar pohon tampil secara detail (pohon akar lengkap).</p></li>
+</ul>
+</li>
+<li><p>Decision Tree Predictor: Menerapkan model yang sudah dilatih ke data uji.</p></li>
+<li><p>Scorer: Menghitung tingkat akurasi model untuk melihat seberapa tepat prediksi yang dihasilkan.</p></li>
 </ul>
 </section>
-<hr class="docutils" />
-<section id="tahapan-dalam-business-understanding">
-<h2>Tahapan dalam Business Understanding<a class="headerlink" href="#tahapan-dalam-business-understanding" title="Permalink to this heading">#</a></h2>
-<p>Tahap Business Understanding terdiri dari beberapa langkah, yaitu:</p>
-<section id="menentukan-tujuan-bisnis">
-<h3>1. Menentukan Tujuan Bisnis<a class="headerlink" href="#menentukan-tujuan-bisnis" title="Permalink to this heading">#</a></h3>
-<p>Pada tahap ini, dilakukan identifikasi terhadap tujuan utama yang ingin dicapai, seperti meningkatkan penjualan, mengurangi biaya, atau meningkatkan kepuasan pelanggan.</p>
-</section>
-<section id="mengidentifikasi-permasalahan">
-<h3>2. Mengidentifikasi Permasalahan<a class="headerlink" href="#mengidentifikasi-permasalahan" title="Permalink to this heading">#</a></h3>
-<p>Menentukan masalah yang sedang dihadapi, misalnya penurunan penjualan atau rendahnya loyalitas pelanggan.</p>
-</section>
-<section id="menentukan-tujuan-data-mining">
-<h3>3. Menentukan Tujuan Data Mining<a class="headerlink" href="#menentukan-tujuan-data-mining" title="Permalink to this heading">#</a></h3>
-<p>Mengubah tujuan bisnis menjadi tujuan teknis yang dapat dianalisis menggunakan data.</p>
-<p>Contoh:</p>
+<section id="hasil-dan-visualisasi-decition-tree">
+<h2>Hasil dan Visualisasi Decition Tree<a class="headerlink" href="#hasil-dan-visualisasi-decition-tree" title="Permalink to this heading">#</a></h2>
+<p><img alt="gain2" src="_images/gain2.png" /></p>
 <ul class="simple">
-<li><p>Tujuan bisnis: meningkatkan penjualan</p></li>
-<li><p>Tujuan data mining: memprediksi produk yang paling diminati pelanggan</p></li>
+<li><p>Akar Utama (Root Node): Atribut Humidity (teridentifikasi sebagai empty_E) terpilih sebagai pemisah utama karena memiliki Gain Ratio tertinggi.</p></li>
+<li><p>Distribusi Data: Dari total 12 data yang masuk ke model, 7 data (58.3%) menghasilkan keputusan Yes dan 4 data (33.3%) menghasilkan keputusan No.</p></li>
+<li><p>Logika Percabangan:</p>
+<ul>
+<li><p>Jika Humidity = Normal: Mayoritas data (83.3%) mengarah pada keputusan Yes.</p></li>
+<li><p>Jika Humidity = High: Mayoritas data (60%) mengarah pada keputusan No.</p></li>
+</ul>
+</li>
 </ul>
 </section>
-<section id="menentukan-strategi">
-<h3>4. Menentukan Strategi<a class="headerlink" href="#menentukan-strategi" title="Permalink to this heading">#</a></h3>
-<p>Menentukan metode atau pendekatan yang akan digunakan untuk menyelesaikan masalah.</p>
-</section>
-</section>
-<hr class="docutils" />
-<section id="contoh-kasus">
-<h2>Contoh Kasus<a class="headerlink" href="#contoh-kasus" title="Permalink to this heading">#</a></h2>
-<p>Sebuah toko online mengalami penurunan penjualan dalam beberapa bulan terakhir.</p>
-<p>Maka:</p>
+<section id="evaluasi-model-scorer">
+<h2>Evaluasi Model Scorer<a class="headerlink" href="#evaluasi-model-scorer" title="Permalink to this heading">#</a></h2>
+<p><img alt="gain3" src="_images/gain3.png" /></p>
 <ul class="simple">
-<li><p>Tujuan bisnis: meningkatkan penjualan</p></li>
-<li><p>Permasalahan: penurunan minat pelanggan</p></li>
-<li><p>Solusi data mining: analisis pola pembelian pelanggan menggunakan algoritma KNN</p></li>
+<li><p>Correct Classified: 1 (Satu data berhasil ditebak dengan benar)</p></li>
+<li><p>Wrong Classified: 1 (Satu data gagal ditebak dengan benar).</p></li>
+<li><p>Accuracy: 50% (Model memiliki tingkat ketepatan sebesar 50% pada data uji).</p></li>
+<li><p>Error: 50% (Tingkat kesalahan prediksi model adalah 50%).</p></li>
 </ul>
-</section>
-<hr class="docutils" />
-<section id="kesimpulan">
-<h2>Kesimpulan<a class="headerlink" href="#kesimpulan" title="Permalink to this heading">#</a></h2>
-<p>Business Understanding merupakan tahap yang sangat penting dalam proses data mining karena menentukan arah dan tujuan analisis. Tanpa pemahaman bisnis yang baik, hasil analisis data bisa tidak relevan dan tidak memberikan solusi yang tepat.</p>
+<p>Tabel ini menunjukkan perbandingan antara nilai asli (Actual) dengan hasil prediksi (Prediction):</p>
+<ul class="simple">
+<li><p>True Negative: Terdapat 1 data “No” yang diprediksi dengan benar sebagai “No”.</p></li>
+<li><p>False Negative: Terdapat 1 data “Yes” yang salah diprediksi menjadi “No”.</p></li>
+</ul>
 </section>
 </section>
 
@@ -499,22 +609,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="naive_bayes.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">240411100147 Intan Resti Haslindawati</p>
+        <p class="prev-next-title">Naive Bayes</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="data_understanding.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Data Understanding</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -532,17 +633,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-business-understanding">Tujuan Business Understanding</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tahapan-dalam-business-understanding">Tahapan dalam Business Understanding</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-tujuan-bisnis">1. Menentukan Tujuan Bisnis</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mengidentifikasi-permasalahan">2. Mengidentifikasi Permasalahan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-tujuan-data-mining">3. Menentukan Tujuan Data Mining</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menentukan-strategi">4. Menentukan Strategi</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-kasus">Contoh Kasus</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kesimpulan">Kesimpulan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-knime">Implementasi KNIME</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-dan-visualisasi-decition-tree">Hasil dan Visualisasi Decition Tree</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluasi-model-scorer">Evaluasi Model Scorer</a></li>
 </ul>
   </nav></div>
 
